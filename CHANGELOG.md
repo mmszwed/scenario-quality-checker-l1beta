@@ -9,4 +9,4 @@ W ramach prac Scrum Mastera:
 - Dodano backlog pozostałych funkcji z Excela i podsumowanie punktacji.
 - Uzupełniono początkowe README projektu.
 
-Pakiet startowy: branch `chore/initial-sprint`. Implementacja aplikacji pozostaje w zadaniach sprintu.
+Pakiet startowy: [PR #1](https://github.com/mmszwed/scenario-quality-checker-l1beta/pull/1), branch `chore/initial-sprint`. Implementacja aplikacji pozostaje w zadaniach sprintu.
