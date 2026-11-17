@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-11-17 — Plan Sprintu 2
+
+- Rozpisano dokończenie funkcji produktu oraz GUI na Sprint 2.
+- Dodano zadania testów jednostkowych, mocków, Javadoc 7 typów i retrospektywy.
+- Sprawdzono pokrycie punktacji dla 4 osób; próg 7 BV wymaga uzgodnienia brakującego BV z prowadzącym.
+- Plan nie rozpoczyna Sprintu 2 ani nie zmienia zadań Sprintu 1.
+
 ## 2026-11-16 — Przygotowanie Sprintu 1
 
 W ramach prac Scrum Mastera:

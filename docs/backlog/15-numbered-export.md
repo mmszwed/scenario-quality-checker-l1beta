@@ -1,6 +1,6 @@
 # Task 15 — Eksportować scenariusz jako tekst z numeracją
 
-**Zakres:** Product Backlog — kolejny sprint. **Ważność z Excela:** 10. **BV:** 1,5.
+**Zakres:** plan Sprintu 2 — po zakończeniu Sprintu 1. **Ważność z Excela:** 10. **BV:** 1,5.
 
 Branch: `feature/numbered-export` · Estymata: 4 h · Po modelu i REST API ze Sprintu 1.
 

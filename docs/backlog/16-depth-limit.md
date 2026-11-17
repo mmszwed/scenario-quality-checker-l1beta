@@ -1,6 +1,6 @@
 # Task 16 — Ograniczyć głębokość scenariusza
 
-**Zakres:** Product Backlog — kolejny sprint. **Ważność z Excela:** 10. **BV:** 1.
+**Zakres:** plan Sprintu 2 — po zakończeniu Sprintu 1. **Ważność z Excela:** 10. **BV:** 1.
 
 Branch: `feature/depth-limit` · Estymata: 3 h · Po modelu i REST API ze Sprintu 1.
 

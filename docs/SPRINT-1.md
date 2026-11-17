@@ -12,9 +12,9 @@ Każdy task ma osobny plik gotowy do skopiowania jako GitHub issue. Godziny są 
 | Liczenie wszystkich kroków | 15 | 1 | Sprint 1 |
 | Liczenie kroków ze słowami kluczowymi | 12 | 1 | Sprint 1 |
 | Wykrywanie kroków bez aktora | 10 | 1 | Sprint 1 |
-| [Eksport tekstu z numeracją](backlog/15-numbered-export.md) | 10 | 1,5 | Kolejny sprint |
-| [Ograniczanie głębokości scenariusza](backlog/16-depth-limit.md) | 10 | 1 | Kolejny sprint |
-| [GUI — przygotowanie zakresu](backlog/17-gui-scope.md) | Brak w źródle | Brak w źródle | Później, zakres z prowadzącym |
+| [Eksport tekstu z numeracją](backlog/15-numbered-export.md) | 10 | 1,5 | Plan Sprintu 2 |
+| [Ograniczanie głębokości scenariusza](backlog/16-depth-limit.md) | 10 | 1 | Plan Sprintu 2 |
+| [GUI — przygotowanie zakresu](backlog/17-gui-scope.md) | Brak w źródle | Brak w źródle | Plan Sprintu 2, BV z prowadzącym |
 
 **Sprint 1: 4 BV.** Zadania techniczne nie dodają BV. Przy równej ważności wybieramy wykrywanie błędów aktora przed eksportem i ograniczaniem głębokości, żeby dostarczyć spójny zestaw analiz.
 
@@ -73,3 +73,5 @@ Brak któregokolwiek obowiązkowego minimum DoD oznacza brak punktów za BV. Dla
 Utworzono 17 issues oraz [milestone Sprint 1](https://github.com/mmszwed/scenario-quality-checker-l1beta/milestone/1) z 14 zadaniami. Do wykonania pozostają aplikacja, CI, dokumentacja techniczna, diagram i wydanie. Konfiguracja tablicy Project, przypisanie wykonawców i potwierdzenie dostępu prowadzącego należą do Task 1. Samo utworzenie issues nie zalicza pozostałych kryteriów.
 
 Issues poza Sprintem 1: [Task 15 / #16](https://github.com/mmszwed/scenario-quality-checker-l1beta/issues/16), [Task 16 / #17](https://github.com/mmszwed/scenario-quality-checker-l1beta/issues/17), [Task 17 / #18](https://github.com/mmszwed/scenario-quality-checker-l1beta/issues/18).
+
+Dokończenie produktu i nowe wymagania testowe: [plan Sprintu 2](SPRINT-2.md).
