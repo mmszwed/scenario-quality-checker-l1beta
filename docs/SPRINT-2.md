@@ -18,22 +18,22 @@ Tabela prowadzącego ocenia cały przyrost produktu: próg 7 BV odnosimy do koń
 
 Task 15–17 i ich istniejące issues wykorzystujemy ponownie, bez duplikatów.
 
-| Task | Zadanie | Branch | Estymata |
-|---|---|---|---:|
-| 15 | [Eksportować scenariusz jako tekst z numeracją](backlog/15-numbered-export.md) | `feature/numbered-export` | 4 h |
-| 16 | [Ograniczyć głębokość scenariusza](backlog/16-depth-limit.md) | `feature/depth-limit` | 3 h |
-| 17 | [Przygotować zakres interfejsu użytkownika](backlog/17-gui-scope.md) | `docs/gui-scope` | 2 h |
-| 18 | [Zaimplementować prosty interfejs użytkownika](tasks-sprint2/18-gui.md) | `feature/gui` | 6 h |
-| 19 | [Udostępnić wszystkie funkcje przez REST i połączyć je z GUI](tasks-sprint2/19-rest-integration.md) | `feature/sprint2-rest` | 3 h |
-| 20 | [Doprowadzić testy jednostkowe do 20 metod w minimum 2 klasach](tasks-sprint2/20-unit-tests.md) | `test/unit-tests` | 6 h |
-| 21 | [Przetestować 10 wywołań zależności za pomocą mocków](tasks-sprint2/21-mock-tests.md) | `test/mock-interactions` | 4 h |
-| 22 | [Uzupełnić pełny Javadoc do minimum 7 klas lub interfejsów](tasks-sprint2/22-javadoc.md) | `docs/sprint2-javadoc` | 3 h |
-| 23 | [Zaktualizować diagram klas do końcowej aplikacji](tasks-sprint2/23-uml.md) | `docs/sprint2-uml` | 2 h |
-| 24 | [Sprawdzić build, CI i regresję po rozszerzeniu aplikacji](tasks-sprint2/24-ci-regression.md) | `chore/sprint2-ci` | 2 h |
-| 25 | [Przeprowadzić retrospektywę Sprintu 1 i zapisać akcje naprawcze](tasks-sprint2/25-retrospective.md) | `docs/sprint1-retrospective` | 2 h |
-| 26 | [Monitorować wdrożenie akcji z retrospektywy](tasks-sprint2/26-retro-actions.md) | `chore/retro-actions` | 2 h |
-| 27 | [Przygotować backlog Sprintu 2 i potwierdzić próg 7 BV](tasks-sprint2/27-sprint-planning.md) | `chore/sprint2-planning` | 2 h |
-| 28 | [Uzupełnić README, wydać wersję 0.2.0 i przeprowadzić końcowe demo](tasks-sprint2/28-release.md) | `release/sprint-2` | 3 h |
+| Task | Zadanie | Branch | Estymata | Issue |
+|---|---|---|---:|---|
+| 15 | [Eksportować scenariusz jako tekst z numeracją](backlog/15-numbered-export.md) | `feature/numbered-export` | 4 h | [#16](https://github.com/mmszwed/scenario-quality-checker-l1beta/issues/16) |
+| 16 | [Ograniczyć głębokość scenariusza](backlog/16-depth-limit.md) | `feature/depth-limit` | 3 h | [#17](https://github.com/mmszwed/scenario-quality-checker-l1beta/issues/17) |
+| 17 | [Przygotować zakres interfejsu użytkownika](backlog/17-gui-scope.md) | `docs/gui-scope` | 2 h | [#18](https://github.com/mmszwed/scenario-quality-checker-l1beta/issues/18) |
+| 18 | [Zaimplementować prosty interfejs użytkownika](tasks-sprint2/18-gui.md) | `feature/gui` | 6 h | [#19](https://github.com/mmszwed/scenario-quality-checker-l1beta/issues/19) |
+| 19 | [Udostępnić wszystkie funkcje przez REST i połączyć je z GUI](tasks-sprint2/19-rest-integration.md) | `feature/sprint2-rest` | 3 h | [#20](https://github.com/mmszwed/scenario-quality-checker-l1beta/issues/20) |
+| 20 | [Doprowadzić testy jednostkowe do 20 metod w minimum 2 klasach](tasks-sprint2/20-unit-tests.md) | `test/unit-tests` | 6 h | [#21](https://github.com/mmszwed/scenario-quality-checker-l1beta/issues/21) |
+| 21 | [Przetestować 10 wywołań zależności za pomocą mocków](tasks-sprint2/21-mock-tests.md) | `test/mock-interactions` | 4 h | [#22](https://github.com/mmszwed/scenario-quality-checker-l1beta/issues/22) |
+| 22 | [Uzupełnić pełny Javadoc do minimum 7 klas lub interfejsów](tasks-sprint2/22-javadoc.md) | `docs/sprint2-javadoc` | 3 h | [#23](https://github.com/mmszwed/scenario-quality-checker-l1beta/issues/23) |
+| 23 | [Zaktualizować diagram klas do końcowej aplikacji](tasks-sprint2/23-uml.md) | `docs/sprint2-uml` | 2 h | [#24](https://github.com/mmszwed/scenario-quality-checker-l1beta/issues/24) |
+| 24 | [Sprawdzić build, CI i regresję po rozszerzeniu aplikacji](tasks-sprint2/24-ci-regression.md) | `chore/sprint2-ci` | 2 h | [#25](https://github.com/mmszwed/scenario-quality-checker-l1beta/issues/25) |
+| 25 | [Przeprowadzić retrospektywę Sprintu 1 i zapisać akcje naprawcze](tasks-sprint2/25-retrospective.md) | `docs/sprint1-retrospective` | 2 h | [#26](https://github.com/mmszwed/scenario-quality-checker-l1beta/issues/26) |
+| 26 | [Monitorować wdrożenie akcji z retrospektywy](tasks-sprint2/26-retro-actions.md) | `chore/retro-actions` | 2 h | [#27](https://github.com/mmszwed/scenario-quality-checker-l1beta/issues/27) |
+| 27 | [Przygotować backlog Sprintu 2 i potwierdzić próg 7 BV](tasks-sprint2/27-sprint-planning.md) | `chore/sprint2-planning` | 2 h | [#28](https://github.com/mmszwed/scenario-quality-checker-l1beta/issues/28) |
+| 28 | [Uzupełnić README, wydać wersję 0.2.0 i przeprowadzić końcowe demo](tasks-sprint2/28-release.md) | `release/sprint-2` | 3 h | [#29](https://github.com/mmszwed/scenario-quality-checker-l1beta/issues/29) |
 
 ## Kolejność
 
@@ -49,7 +49,7 @@ Testy ze Sprintu 1 liczą się do łącznej liczby metod; nie trzeba pisać 20 d
 To pokrycie planem, nie przyznane punkty. Wiersze sumują się przyrostowo, zgodnie z tabelą prowadzącego.
 
 | Kryterium | Minimum | Task / dowód | Punkty |
-|---|---|---|---:|
+|---|---|---|---:|---|
 | DoD 1: repo i dostęp prowadzącego | Tak | 27, 28; aktualne repo i dostęp | 10 |
 | DoD 2: tag zgodny z pom.xml | Tak | 28; wersja i tag 0.2.0 | 10 |
 | DoD 3: automatyczny build i paczka | Tak | 24; JAR i udany build | 5 |
@@ -84,4 +84,4 @@ Dla 4 osób tabela nie daje dodatkowych punktów za diagram sekwencji (8.2), 25 
 
 ## GitHub
 
-[Tablica projektu](https://github.com/users/mmszwed/projects/4/views/1). Issues Sprintu 2 pozostają nierozpoczęte; nie zmieniamy wykonawców ani zakresu Sprintu 1. Przed rozpoczęciem Sprintu 2 trzeba ponownie przejrzeć backlog, zaległości i dostępność zespołu. Daty przyszłego sprintu nie wynikają z dostarczonych materiałów.
+[Tablica projektu](https://github.com/users/mmszwed/projects/4/views/1) · [Milestone Sprint 2](https://github.com/mmszwed/scenario-quality-checker-l1beta/milestone/2). Issues Sprintu 2 pozostają nierozpoczęte; nie zmieniamy wykonawców ani zakresu Sprintu 1. Przed rozpoczęciem Sprintu 2 trzeba ponownie przejrzeć backlog, zaległości i dostępność zespołu. Daty przyszłego sprintu nie wynikają z dostarczonych materiałów.
