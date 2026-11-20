@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-11-20 — Implementacja Sprintu 1
+
+- Task 6 — Michał Kaczor dodał `StepCounter`, wizytatora liczącego wszystkie kroki na każdym poziomie zagnieżdżenia, oraz testy: pusty, płaski, zagnieżdżony scenariusz. [Issue #7](https://github.com/mmszwed/scenario-quality-checker-l1beta/issues/7)
+
 ## 2026-11-18 — Implementacja Sprintu 1
 
 - Task 2 — Michał Kaczor przygotował projekt Java/Maven, wykonywalny JAR, endpoint `GET /api/health` i testy uruchomienia. [PR #30](https://github.com/mmszwed/scenario-quality-checker-l1beta/pull/30)
