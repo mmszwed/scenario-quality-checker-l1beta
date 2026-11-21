@@ -34,7 +34,7 @@ curl -X POST http://localhost:8080/api/scenarios/analyze \
 Pola `title`, `systemActor` oraz `text` każdego kroku wymagają niepustego tekstu.
 Pominięte lub równe `null` listy `actors`, `steps` i `subSteps` są traktowane jako puste.
 
-Po podłączeniu analiz z Tasków 6–8 oczekiwana odpowiedź dla tego przykładu to HTTP 200:
+Endpoint zwraca HTTP 200 z wynikami trzech analiz. Dla powyższego przykładu odpowiedź wygląda tak:
 
 ```json
 {
@@ -46,4 +46,4 @@ Po podłączeniu analiz z Tasków 6–8 oczekiwana odpowiedź dla tego przykład
 }
 ```
 
-Niepoprawne dane JSON zwracają HTTP 400. Do czasu podłączenia analiz poprawne żądanie zwraca HTTP 503.
+Niepoprawne dane JSON zwracają HTTP 400.

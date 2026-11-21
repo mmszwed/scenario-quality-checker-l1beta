@@ -3,6 +3,7 @@
 ## 2026-11-21 — Implementacja Sprintu 1
 
 - Task 8 — Julia Wnukiewicz dodała `MissingActorVisitor` wykrywający kroki bez aktora, uwzględniający aktorów z nagłówka (również systemowego) i zagnieżdżenia. Dodano testy jednostkowe. [Issue #9](https://github.com/mmszwed/scenario-quality-checker-l1beta/issues/9)
+- Task 5 — Mateusz Szwed podpiął trzy analizy z Tasków 6–8 pod endpoint `POST /api/scenarios/analyze` i sprawdził rzeczywiste wyniki w testach integracyjnych. [Issue #6](https://github.com/mmszwed/scenario-quality-checker-l1beta/issues/6)
 
 ## 2026-11-20 — Implementacja Sprintu 1
 
@@ -14,7 +15,7 @@
 - Task 2 — Michał Kaczor przygotował projekt Java/Maven, wykonywalny JAR, endpoint `GET /api/health` i testy uruchomienia. [PR #30](https://github.com/mmszwed/scenario-quality-checker-l1beta/pull/30)
 - Task 3 — Julia Wnukiewicz uzupełniła `.gitignore` o reguły ignorowania artefaktów kompilacji, lokalnych plików IDE, `.DS_Store` i lokalnych plików środowiskowych. [PR #31](https://github.com/mmszwed/scenario-quality-checker-l1beta/pull/31)
 - Task 4 — Patryk Czupak dodał model scenariusza, wzorzec Visitor i testy przejścia przez zagnieżdżone kroki. [PR #32](https://github.com/mmszwed/scenario-quality-checker-l1beta/pull/32)
-- Task 5 Mateusz Szwed przygotował endpoint `POST /api/scenarios/analyze`, mapowanie JSON, walidację wejścia, testy integracyjne i przykład w README. Do zamknięcia zadania pozostało podpięcie analiz z Tasków 6–8. [Issue #6](https://github.com/mmszwed/scenario-quality-checker-l1beta/issues/6)
+- Task 5 — Mateusz Szwed przygotował endpoint `POST /api/scenarios/analyze`, mapowanie JSON, walidację wejścia, testy integracyjne i przykład w README. [Issue #6](https://github.com/mmszwed/scenario-quality-checker-l1beta/issues/6)
 
 ## 2026-11-17 — Plan Sprintu 2
 
