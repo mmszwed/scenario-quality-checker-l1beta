@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-11-21 — Implementacja Sprintu 1
+
+- Task 8 — Julia Wnukiewicz dodała `MissingActorVisitor` wykrywający kroki bez aktora, uwzględniający aktorów z nagłówka (również systemowego) i zagnieżdżenia. Dodano testy jednostkowe. [Issue #9](https://github.com/mmszwed/scenario-quality-checker-l1beta/issues/9)
+
 ## 2026-11-20 — Implementacja Sprintu 1
 
 - Task 6 — Michał Kaczor dodał `StepCounter`, wizytatora liczącego wszystkie kroki na każdym poziomie zagnieżdżenia, oraz testy: pusty, płaski, zagnieżdżony scenariusz. [Issue #7](https://github.com/mmszwed/scenario-quality-checker-l1beta/issues/7)
