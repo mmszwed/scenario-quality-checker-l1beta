@@ -29,18 +29,4 @@ class ScenarioQualityCheckerApplicationTests {
         assertThat(response.statusCode()).isEqualTo(200);
         assertThat(response.body()).contains("\"status\":\"UP\"");
     }
-
-    @Test
-    void endpointReturnsUnavailableUntilAnalyzerIsRegistered() throws IOException, InterruptedException {
-        HttpRequest request = HttpRequest.newBuilder(URI.create("http://localhost:" + port + "/api/scenarios/analyze"))
-                .header("Content-Type", "application/json")
-                .POST(HttpRequest.BodyPublishers.ofString("""
-                        {"title":"Pusty scenariusz","systemActor":"System"}
-                        """))
-                .build();
-
-        HttpResponse<String> response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
-
-        assertThat(response.statusCode()).isEqualTo(503);
-    }
 }

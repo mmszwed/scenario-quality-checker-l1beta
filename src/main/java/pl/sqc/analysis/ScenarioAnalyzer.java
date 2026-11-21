@@ -1,8 +1,15 @@
 package pl.sqc.analysis;
 
+import org.springframework.stereotype.Service;
 import pl.sqc.model.Scenario;
 
-public interface ScenarioAnalyzer {
+@Service
+public class ScenarioAnalyzer {
 
-    AnalysisResult analyze(Scenario scenario);
+    public AnalysisResult analyze(Scenario scenario) {
+        return new AnalysisResult(
+                StepCounter.countSteps(scenario),
+                KeywordStepCounter.countKeywordSteps(scenario),
+                MissingActorVisitor.findMissingActorSteps(scenario));
+    }
 }
