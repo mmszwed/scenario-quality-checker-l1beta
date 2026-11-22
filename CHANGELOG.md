@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-11-22 — Implementacja Sprintu 1
+
+- Task 9 — Julia Wnukiewicz skonfigurowała GitHub Actions uruchamiane automatycznie po `push` i `pull_request`. Dodano pipeline Maven obejmujący kompilację, uruchamianie testów, budowanie wykonywalnego JAR oraz publikowanie go jako artefaktu workflow.
+
 ## 2026-11-21 — Implementacja Sprintu 1
 
 - Task 8 — Julia Wnukiewicz dodała `MissingActorVisitor` wykrywający kroki bez aktora, uwzględniający aktorów z nagłówka (również systemowego) i zagnieżdżenia. Dodano testy jednostkowe. [Issue #9](https://github.com/mmszwed/scenario-quality-checker-l1beta/issues/9)
