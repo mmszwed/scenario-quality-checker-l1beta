@@ -13,9 +13,14 @@ import java.util.regex.Pattern;
  */
 public final class StepKeywords {
 
+    /**
+     * Słowo kluczowe na początku tekstu razem z opcjonalnym dwukropkiem i spacjami po nim.
+     * Grupa 1 zawiera samo słowo kluczowe.
+     */
     private static final Pattern KEYWORD_PREFIX =
             Pattern.compile("^\\s*(IF|ELSE|FOR\\s+EACH)(?=[\\s:]|$)\\s*:?\\s*");
 
+    /** Klasa narzędziowa, nie tworzy się jej instancji. */
     private StepKeywords() {
     }
 

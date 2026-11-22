@@ -10,6 +10,7 @@ import pl.sqc.model.StepPath;
  */
 public final class StepCounter implements ScenarioVisitor {
 
+    /** Liczba odwiedzonych kroków. */
     private int count;
 
     /**
@@ -24,6 +25,12 @@ public final class StepCounter implements ScenarioVisitor {
         return counter.count;
     }
 
+    /**
+     * Zwiększa licznik o każdy odwiedzony krok, niezależnie od poziomu zagnieżdżenia.
+     *
+     * @param step odwiedzany krok
+     * @param path położenie kroku w scenariuszu
+     */
     @Override
     public void visitStep(Step step, StepPath path) {
         count++;

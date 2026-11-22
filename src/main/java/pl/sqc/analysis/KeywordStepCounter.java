@@ -11,6 +11,7 @@ import pl.sqc.model.StepPath;
  */
 public final class KeywordStepCounter implements ScenarioVisitor {
 
+    /** Liczba odwiedzonych kroków ze słowem kluczowym na początku. */
     private int count;
 
     /**
@@ -25,6 +26,12 @@ public final class KeywordStepCounter implements ScenarioVisitor {
         return counter.count;
     }
 
+    /**
+     * Zwiększa licznik, gdy krok zaczyna się od słowa kluczowego.
+     *
+     * @param step odwiedzany krok
+     * @param path położenie kroku w scenariuszu
+     */
     @Override
     public void visitStep(Step step, StepPath path) {
         if (StepKeywords.startsWithKeyword(step.text())) {

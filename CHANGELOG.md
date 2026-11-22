@@ -2,6 +2,7 @@
 
 ## 2026-11-22 — Implementacja Sprintu 1
 
+- Task 10 - Patryk Czupak dodał generowanie Javadoc podczas `mvn package` i publikowanie dokumentacji jako artefaktu CI. Udokumentowano `AnalysisResult`, `ScenarioAnalyzer`, `MissingActorVisitor`, `ScenarioAnalysisController` oraz brakujące pola i metody w licznikach kroków i `StepKeywords`. [Issue #11](https://github.com/mmszwed/scenario-quality-checker-l1beta/issues/11)
 - Task 9 — Julia Wnukiewicz skonfigurowała GitHub Actions uruchamiane automatycznie po `push` i `pull_request`. Dodano pipeline Maven obejmujący kompilację, uruchamianie testów, budowanie wykonywalnego JAR oraz publikowanie go jako artefaktu workflow.
 
 ## 2026-11-21 — Implementacja Sprintu 1
