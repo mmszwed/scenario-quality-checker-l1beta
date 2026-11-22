@@ -47,3 +47,7 @@ Endpoint zwraca HTTP 200 z wynikami trzech analiz. Dla powyższego przykładu od
 ```
 
 Niepoprawne dane JSON zwracają HTTP 400.
+
+## Javadoc
+
+Dokumentacja generuje się podczas `mvn package` w katalogu `target/reports/apidocs` (start: `index.html`). W CI jest dostępna jako artefakt `javadoc`.
