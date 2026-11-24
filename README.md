@@ -48,6 +48,25 @@ Endpoint zwraca HTTP 200 z wynikami trzech analiz. Dla powyższego przykładu od
 
 Niepoprawne dane JSON zwracają HTTP 400.
 
+## Logowanie
+
+Aplikacja loguje przez SLF4J (Logback). Domyślny poziom dla pakietu `pl.sqc` to `INFO`, ustawiony w `src/main/resources/application.properties`.
+
+- `INFO` — start i koniec każdej analizy: tytuł scenariusza, liczba kroków, kroków ze słowem kluczowym i kroków bez aktora.
+- `DEBUG` — dodatkowo aktorzy, aktor systemowy, liczba kroków najwyższego poziomu i pełny wynik analizy.
+
+Aby zobaczyć logi `DEBUG`, uruchom aplikację z parametrem:
+
+```sh
+mvn spring-boot:run -Dspring-boot.run.arguments=--logging.level.pl.sqc=DEBUG
+```
+
+albo dla gotowego JAR-a:
+
+```sh
+java -jar target/scenario-quality-checker-0.1.0-SNAPSHOT.jar --logging.level.pl.sqc=DEBUG
+```
+
 ## Javadoc
 
 Dokumentacja generuje się podczas `mvn package` w katalogu `target/reports/apidocs` (start: `index.html`). W CI jest dostępna jako artefakt `javadoc`.

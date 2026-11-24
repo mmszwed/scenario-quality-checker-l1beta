@@ -5,6 +5,8 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import pl.sqc.model.Scenario;
 import pl.sqc.model.ScenarioVisitor;
 import pl.sqc.model.Step;
@@ -19,6 +21,8 @@ import pl.sqc.model.StepPath;
  * albo koniec tekstu.
  */
 public final class MissingActorVisitor implements ScenarioVisitor {
+
+    private static final Logger log = LoggerFactory.getLogger(MissingActorVisitor.class);
 
     /** Znalezione kroki bez aktora w kolejności odwiedzania. */
     private final List<AnalysisResult.MissingActorStep> missingSteps = new ArrayList<>();
@@ -35,6 +39,7 @@ public final class MissingActorVisitor implements ScenarioVisitor {
     public static List<AnalysisResult.MissingActorStep> findMissingActorSteps(Scenario scenario) {
         MissingActorVisitor visitor = new MissingActorVisitor();
         scenario.accept(visitor);
+        log.debug("Kroki bez aktora w scenariuszu '{}': {}", scenario.title(), visitor.missingSteps.size());
         return List.copyOf(visitor.missingSteps);
     }
 
@@ -67,6 +72,7 @@ public final class MissingActorVisitor implements ScenarioVisitor {
         boolean hasActor = actors.stream().anyMatch(actor -> startsWithActor(text, actor));
 
         if (!hasActor) {
+            log.debug("Krok {} nie zaczyna się od aktora: '{}'", path, step.text());
             missingSteps.add(
                     new AnalysisResult.MissingActorStep(path.toString(), step.text())
             );
