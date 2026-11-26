@@ -1,5 +1,7 @@
 package pl.sqc.analysis;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import pl.sqc.model.Scenario;
 import pl.sqc.model.ScenarioVisitor;
 import pl.sqc.model.Step;
@@ -9,6 +11,8 @@ import pl.sqc.model.StepPath;
  * Liczy wszystkie kroki scenariusza: główne i z podscenariuszy na każdym poziomie.
  */
 public final class StepCounter implements ScenarioVisitor {
+
+    private static final Logger log = LoggerFactory.getLogger(StepCounter.class);
 
     /** Liczba odwiedzonych kroków. */
     private int count;
@@ -22,6 +26,7 @@ public final class StepCounter implements ScenarioVisitor {
     public static int countSteps(Scenario scenario) {
         StepCounter counter = new StepCounter();
         scenario.accept(counter);
+        log.debug("Policzono wszystkie kroki scenariusza '{}': {}", scenario.title(), counter.count);
         return counter.count;
     }
 

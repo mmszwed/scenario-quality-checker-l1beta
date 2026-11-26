@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-11-24 — Implementacja Sprintu 1
+
+- Task 11 — Michał Kaczor dodał logowanie SLF4J: INFO dla startu i wyniku analizy w kontrolerze; DEBUG dla szczegółów scenariusza, wyników `StepCounter`, `KeywordStepCounter` i `MissingActorVisitor`, kroków bez aktora oraz odrzuconych wejść w `ScenarioRequestMapper`. Domyślny poziom `pl.sqc` ustawiono na INFO i opisano zmianę w README. [Issue #12](https://github.com/mmszwed/scenario-quality-checker-l1beta/issues/12)
+
 ## 2026-11-22 — Implementacja Sprintu 1
 
 - Task 10 - Patryk Czupak dodał generowanie Javadoc podczas `mvn package` i publikowanie dokumentacji jako artefaktu CI. Udokumentowano `AnalysisResult`, `ScenarioAnalyzer`, `MissingActorVisitor`, `ScenarioAnalysisController` oraz brakujące pola i metody w licznikach kroków i `StepKeywords`. [Issue #11](https://github.com/mmszwed/scenario-quality-checker-l1beta/issues/11)

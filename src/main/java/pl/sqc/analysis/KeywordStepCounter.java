@@ -1,5 +1,7 @@
 package pl.sqc.analysis;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import pl.sqc.model.Scenario;
 import pl.sqc.model.ScenarioVisitor;
 import pl.sqc.model.Step;
@@ -10,6 +12,8 @@ import pl.sqc.model.StepPath;
  * na wszystkich poziomach zagnieżdżenia.
  */
 public final class KeywordStepCounter implements ScenarioVisitor {
+
+    private static final Logger log = LoggerFactory.getLogger(KeywordStepCounter.class);
 
     /** Liczba odwiedzonych kroków ze słowem kluczowym na początku. */
     private int count;
@@ -23,6 +27,7 @@ public final class KeywordStepCounter implements ScenarioVisitor {
     public static int countKeywordSteps(Scenario scenario) {
         KeywordStepCounter counter = new KeywordStepCounter();
         scenario.accept(counter);
+        log.debug("Policzono kroki ze słowem kluczowym w scenariuszu '{}': {}", scenario.title(), counter.count);
         return counter.count;
     }
 

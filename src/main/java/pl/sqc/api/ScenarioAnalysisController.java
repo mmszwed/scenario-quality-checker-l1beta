@@ -1,5 +1,7 @@
 package pl.sqc.api;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -15,10 +17,15 @@ import tools.jackson.databind.JsonNode;
  *
  * <p>Przyjmuje scenariusz w formacie JSON, zamienia go na model {@link Scenario}
  * i zwraca wyniki analizy. Niepoprawne dane kończą się odpowiedzią HTTP 400.
+ *
+ * <p>Logi: poziom INFO zapisuje start i wynik analizy, poziom DEBUG dodatkowo
+ * szczegóły scenariusza i pełny wynik.
  */
 @RestController
 @RequestMapping("/api/scenarios")
 public class ScenarioAnalysisController {
+
+    private static final Logger log = LoggerFactory.getLogger(ScenarioAnalysisController.class);
 
     /** Usługa wykonująca analizy scenariusza. */
     private final ScenarioAnalyzer analyzer;
@@ -44,6 +51,15 @@ public class ScenarioAnalysisController {
     @PostMapping(value = "/analyze", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public AnalysisResult analyze(@RequestBody JsonNode body) {
         Scenario scenario = ScenarioRequestMapper.toScenario(body);
-        return analyzer.analyze(scenario);
+        log.info("Rozpoczęto analizę scenariusza '{}'", scenario.title());
+        log.debug("Scenariusz: aktorzy={}, aktor systemowy={}, kroki najwyższego poziomu={}",
+                scenario.actors(), scenario.systemActor(), scenario.steps().size());
+
+        AnalysisResult result = analyzer.analyze(scenario);
+
+        log.info("Zakończono analizę scenariusza '{}': kroki={}, kroki ze słowem kluczowym={}, kroki bez aktora={}",
+                scenario.title(), result.stepCount(), result.keywordStepCount(), result.missingActorSteps().size());
+        log.debug("Wynik analizy: {}", result);
+        return result;
     }
 }
