@@ -1,0 +1,114 @@
+---
+config:
+  theme: default
+  look: classic
+  fontFamily: '''Source Code Pro Variable'', monospace'
+---
+classDiagram
+    class Scenario {
+        <<record>>
+        String title
+        List~String~ actors
+        String systemActor
+        List~Step~ steps
+        +accept(ScenarioVisitor visitor) void
+    }
+    class Step {
+        <<record>>
+        String text
+        List~Step~ subSteps
+        +Step(String text)
+        +hasSubSteps() boolean
+    }
+    class StepPath {
+        <<record>>
+        List~Integer~ indices
+        +root() StepPath$
+        +child(int index) StepPath
+        +depth() int
+        +toString() String
+    }
+    class ScenarioVisitor {
+        <<interface>>
+        +visitScenario(Scenario scenario) void
+        +visitStep(Step step, StepPath path) void
+    }
+    class StepCounter {
+        -int count
+        +countSteps(Scenario scenario) int$
+        +visitStep(Step step, StepPath path) void
+    }
+    class KeywordStepCounter {
+        -int count
+        +countKeywordSteps(Scenario scenario) int$
+        +visitStep(Step step, StepPath path) void
+    }
+    class MissingActorVisitor {
+        -List~MissingActorStep~ missingSteps
+        -Set~String~ actors
+        +findMissingActorSteps(Scenario scenario) List~MissingActorStep~$
+        +visitScenario(Scenario scenario) void
+        +visitStep(Step step, StepPath path) void
+        -startsWithActor(String text, String actor) boolean
+    }
+    class ScenarioAnalysisController {
+        -ScenarioAnalyzer analyzer
+        +ScenarioAnalysisController(ScenarioAnalyzer analyzer)
+        +analyze(JsonNode body) AnalysisResult
+    }
+    class ScenarioAnalyzer {
+        +analyze(Scenario scenario) AnalysisResult
+    }
+    class AnalysisResult {
+        <<record>>
+        int stepCount
+        int keywordStepCount
+        List~MissingActorStep~ missingActorSteps
+    }
+    class MissingActorStep {
+        <<record>>
+        String path
+        String text
+    }
+    class ScenarioRequestMapper {
+        -ScenarioRequestMapper()
+        ~toScenario(JsonNode body) Scenario$
+        -toStep(JsonNode node) Step$
+        -text(JsonNode node, String field) String$
+        -list(JsonNode node, String field, Function mapper) List$
+        -invalid(String message) ResponseStatusException$
+    }
+    class StepKeywords {
+        +startsWithKeyword(String text) boolean$
+        +stripKeyword(String text) String$
+    }
+
+    Scenario "1" *-- "0..*" Step : steps
+    Step "1" *-- "0..*" Step : subSteps
+
+    Scenario ..> ScenarioVisitor : accept
+    Step ..> ScenarioVisitor : visitStep
+    Step ..> StepPath : numeracja
+    ScenarioVisitor ..> StepPath : położenie kroku
+
+    ScenarioVisitor <|.. StepCounter
+    ScenarioVisitor <|.. KeywordStepCounter
+    ScenarioVisitor <|.. MissingActorVisitor
+
+    ScenarioAnalysisController ..> ScenarioAnalyzer : używa
+    ScenarioAnalysisController ..> ScenarioRequestMapper : mapuje JSON
+    ScenarioAnalysisController ..> AnalysisResult : zwraca
+
+    ScenarioRequestMapper ..> Scenario : tworzy
+    ScenarioRequestMapper ..> Step : tworzy
+
+    ScenarioAnalyzer ..> Scenario : analizuje
+    ScenarioAnalyzer ..> StepCounter : liczy kroki
+    ScenarioAnalyzer ..> KeywordStepCounter : liczy słowa kluczowe
+    ScenarioAnalyzer ..> MissingActorVisitor : wykrywa brak aktora
+    ScenarioAnalyzer ..> AnalysisResult : tworzy
+
+    AnalysisResult "1" *-- "0..*" MissingActorStep : missingActorSteps
+
+    KeywordStepCounter ..> StepKeywords : sprawdza słowa kluczowe
+    MissingActorVisitor ..> StepKeywords : usuwa słowa kluczowe
