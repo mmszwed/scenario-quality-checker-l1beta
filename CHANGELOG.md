@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-11-27 — Dokumentacja Sprintu 1
+
+- Task 12 - Julia Wnukiewicz dodała diagram UML przedstawiający strukturę najważniejszych klas i interfejsów projektu oraz zastosowanie wzorca projektowego Visitor. Diagram zapisano w formatach PNG i Mermaid w `docs/uml/` oraz podlinkowano w `README.md`.
+
 ## 2026-11-24 — Implementacja Sprintu 1
 
 - Task 11 — Michał Kaczor dodał logowanie SLF4J: INFO dla startu i wyniku analizy w kontrolerze; DEBUG dla szczegółów scenariusza, wyników `StepCounter`, `KeywordStepCounter` i `MissingActorVisitor`, kroków bez aktora oraz odrzuconych wejść w `ScenarioRequestMapper`. Domyślny poziom `pl.sqc` ustawiono na INFO i opisano zmianę w README. [Issue #12](https://github.com/mmszwed/scenario-quality-checker-l1beta/issues/12)

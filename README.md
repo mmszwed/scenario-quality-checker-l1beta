@@ -70,3 +70,9 @@ java -jar target/scenario-quality-checker-0.1.0-SNAPSHOT.jar --logging.level.pl.
 ## Javadoc
 
 Dokumentacja generuje się podczas `mvn package` w katalogu `target/reports/apidocs` (start: `index.html`). W CI jest dostępna jako artefakt `javadoc`.
+
+## Diagram UML
+
+Diagram przedstawiający strukturę klas projektu oraz zastosowanie wzorca projektowego Visitor.
+
+![Diagram UML](docs/uml/class-diagram.png)
