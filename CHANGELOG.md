@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-11-28 — Dokumentacja Sprintu 1
+
+- Task 13 — Michał Kaczor uzupełnił `README.md` o wymagania, budowanie, testowanie, uruchomienie, notację scenariuszy, przykład „Dodanie książki” z wynikiem API, opis logowania oraz linki do CI i dokumentacji. Scenariusz z przykładu zapisano w `docs/examples/dodanie-ksiazki.json`. [Issue #14](https://github.com/mmszwed/scenario-quality-checker-l1beta/issues/14)
+
 ## 2026-11-27 — Dokumentacja Sprintu 1
 
 - Task 12 - Julia Wnukiewicz dodała diagram UML przedstawiający strukturę najważniejszych klas i interfejsów projektu oraz zastosowanie wzorca projektowego Visitor. Diagram zapisano w formatach PNG i Mermaid w `docs/uml/` oraz podlinkowano w `README.md`.
